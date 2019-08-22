@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+html, body{
+    font-family: 'Raleway', sans-serif;
+    height: 100%;
+    margin: 0;
+}
+
+a{
+    color: black;
+}
+
+#logo{
+    position: absolute;
+    outline: 0.5vw solid #fc089c;
+    background: white;
+    text-align: center;
+    width: 12vw;
+    height: 7vw;
+    margin-left: 10%;
+    z-index: 13;
+    display: inline;
+}
+
+#first{
+    font-size: 2.5vw;
+    margin-bottom: 0.5vw;
+    margin-top: 1vw;
+    letter-spacing: 0.2vw;
+}
+
+#last{
+    margin-top: 0px;
+    font-size: 1vw;
+    margin-bottom: 1vw;
+    letter-spacing: 0.1vw;
+}
+
+nav{
+    margin-left: 60%;
+    z-index: 1;
+}
+
+.sub-menu-parent { 
+    position: relative; 
+}
+
+.sub-menu { 
+  visibility: hidden; 
+  opacity: 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  transform: translateY(-2em);
+  z-index: 1;
+  transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
+}
+
+.sub-menu-parent:focus .sub-menu,
+.sub-menu-parent:focus-within .sub-menu,
+.sub-menu-parent:hover .sub-menu {
+  visibility: visible; /* shows sub-menu */
+  opacity: 1;
+  z-index: 1;
+  transform: translateY(0%);
+  transition-delay: 0s, 0s, 0.3s; /* this removes the transition delay so the menu will be visible while the other styles transition */
+}
+
+/* presentational */
+
+
+nav a { 
+    color: black; 
+    display: block; 
+    padding: 0.5em 1em; 
+    text-decoration: none; 
+    font-size: 2vw;
+}
+
+nav ul, nav ul li { 
+    list-style-type: none; 
+    padding: 0; 
+    margin: 0; 
+}
+
+nav > ul > li { 
+    display: inline-block; 
+}
+
+nav a:hover{
+    font-weight: 600;
+}
+
+.second{
+    font-size: 1vw;
+    text-align: center;
+}
+
+.sub-menu{
+    background: white;
+}
+
+.column {
+    float: left;
+    width: 12.5%;
+    height: 100%;
+}
+
+.row{
+    z-index: -1;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+.column img{
+    width: 100%;
+    -webkit-transition: -webkit-transform 0.4s;
+    transition: transform 0.4s;
+}
+
+.column img:hover{
+    -webkit-transform: scale(0.9) rotate(0.01deg);
+    transform: scale(0.9) rotate(0.01deg);
+}
